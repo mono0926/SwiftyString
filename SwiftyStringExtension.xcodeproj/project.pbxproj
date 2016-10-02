@@ -52,7 +52,6 @@
 		FE7F50A31DA1240A00FCD392 /* SwiftyStringExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyStringExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECE38021DA0F44C00D12632 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FECE38041DA0F44C00D12632 /* String.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
-		FECE38051DA0F44C00D12632 /* SwiftyStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyStringExtension.h; sourceTree = "<group>"; };
 		FECE380B1DA0F47700D12632 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FECE380C1DA0F47700D12632 /* CharacterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +114,6 @@
 		FECE38011DA0F44C00D12632 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FECE38051DA0F44C00D12632 /* SwiftyStringExtension.h */,
 				FECE38021DA0F44C00D12632 /* Info.plist */,
 				FE6A0E2B1DA0FB5400195B68 /* Character.extension.swift */,
 				FECE38041DA0F44C00D12632 /* String.extension.swift */,
@@ -645,6 +643,7 @@
 				FE7F50AE1DA1240B00FCD392 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE7F50AF1DA1240B00FCD392 /* Build configuration list for PBXNativeTarget "SwiftyStringExtensionTests-macOS" */ = {
 			isa = XCConfigurationList;
@@ -653,6 +652,7 @@
 				FE7F50B11DA1240B00FCD392 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
