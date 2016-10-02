@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE7F509A1DA1240A00FCD392"
-               BuildableName = "SwiftyStringExtension-macOS.framework"
+               BuildableName = "SwiftyStringExtension.framework"
                BlueprintName = "SwiftyStringExtension-macOS"
                ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE7F50A21DA1240A00FCD392"
-               BuildableName = "SwiftyStringExtensionTests-macOS.xctest"
+               BuildableName = "SwiftyStringExtensionTests.xctest"
                BlueprintName = "SwiftyStringExtensionTests-macOS"
                ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE7F509A1DA1240A00FCD392"
-            BuildableName = "SwiftyStringExtension-macOS.framework"
+            BuildableName = "SwiftyStringExtension.framework"
             BlueprintName = "SwiftyStringExtension-macOS"
             ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE7F509A1DA1240A00FCD392"
-            BuildableName = "SwiftyStringExtension-macOS.framework"
+            BuildableName = "SwiftyStringExtension.framework"
             BlueprintName = "SwiftyStringExtension-macOS"
             ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE7F509A1DA1240A00FCD392"
-            BuildableName = "SwiftyStringExtension-macOS.framework"
+            BuildableName = "SwiftyStringExtension.framework"
             BlueprintName = "SwiftyStringExtension-macOS"
             ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
          </BuildableReference>
