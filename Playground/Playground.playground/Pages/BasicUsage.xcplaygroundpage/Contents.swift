@@ -4,8 +4,6 @@
 import Cocoa
 #elseif os(iOS)
 import UIKit
-#elseif os(Linux)
-import Glibc
 #endif
 import SwiftyStringExtension
 
