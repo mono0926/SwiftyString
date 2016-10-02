@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FE3261811DA0F358002C5A7F /* SwiftyStringExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3261771DA0F357002C5A7F /* SwiftyStringExtension.framework */; };
-		FE3261861DA0F358002C5A7F /* SwiftyStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3261851DA0F358002C5A7F /* SwiftyStringExtensionTests.swift */; };
-		FE3261881DA0F358002C5A7F /* SwiftyStringExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FE32617A1DA0F357002C5A7F /* SwiftyStringExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6A0E2A1DA0FB3800195B68 /* String.CharacterView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A0E291DA0FB3800195B68 /* String.CharacterView.extension.swift */; };
+		FE6A0E2C1DA0FB5400195B68 /* Character.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A0E2B1DA0FB5400195B68 /* Character.extension.swift */; };
+		FE6A0E311DA0FBB400195B68 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A0E2D1DA0FB9A00195B68 /* StringTests.swift */; };
+		FE6A0E321DA0FBB700195B68 /* String.CharacterViewTests.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A0E2F1DA0FBAF00195B68 /* String.CharacterViewTests.swift.swift */; };
+		FECE38081DA0F44C00D12632 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE38041DA0F44C00D12632 /* String.extension.swift */; };
+		FECE380E1DA0F47700D12632 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECE380C1DA0F47700D12632 /* CharacterTests.swift */; };
+		FECE380F1DA0F4FB00D12632 /* SwiftyStringExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FECE38051DA0F44C00D12632 /* SwiftyStringExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +29,17 @@
 
 /* Begin PBXFileReference section */
 		FE3261771DA0F357002C5A7F /* SwiftyStringExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyStringExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE32617A1DA0F357002C5A7F /* SwiftyStringExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyStringExtension.h; sourceTree = "<group>"; };
-		FE32617B1DA0F357002C5A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3261801DA0F358002C5A7F /* SwiftyStringExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyStringExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE3261851DA0F358002C5A7F /* SwiftyStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyStringExtensionTests.swift; sourceTree = "<group>"; };
-		FE3261871DA0F358002C5A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6A0E281DA0F90D00195B68 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = Playground/Playground.playground; sourceTree = "<group>"; };
+		FE6A0E291DA0FB3800195B68 /* String.CharacterView.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.CharacterView.extension.swift; sourceTree = "<group>"; };
+		FE6A0E2B1DA0FB5400195B68 /* Character.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.extension.swift; sourceTree = "<group>"; };
+		FE6A0E2D1DA0FB9A00195B68 /* StringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		FE6A0E2F1DA0FBAF00195B68 /* String.CharacterViewTests.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.CharacterViewTests.swift.swift; sourceTree = "<group>"; };
+		FECE38021DA0F44C00D12632 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECE38041DA0F44C00D12632 /* String.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
+		FECE38051DA0F44C00D12632 /* SwiftyStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyStringExtension.h; sourceTree = "<group>"; };
+		FECE380B1DA0F47700D12632 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECE380C1DA0F47700D12632 /* CharacterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +64,9 @@
 		FE32616D1DA0F357002C5A7F = {
 			isa = PBXGroup;
 			children = (
-				FE3261791DA0F357002C5A7F /* SwiftyStringExtension */,
-				FE3261841DA0F358002C5A7F /* SwiftyStringExtensionTests */,
+				FE6A0E281DA0F90D00195B68 /* Playground.playground */,
+				FECE38011DA0F44C00D12632 /* Sources */,
+				FECE380A1DA0F47700D12632 /* Tests */,
 				FE3261781DA0F357002C5A7F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,22 +80,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE3261791DA0F357002C5A7F /* SwiftyStringExtension */ = {
+		FECE38011DA0F44C00D12632 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FE32617A1DA0F357002C5A7F /* SwiftyStringExtension.h */,
-				FE32617B1DA0F357002C5A7F /* Info.plist */,
+				FECE38051DA0F44C00D12632 /* SwiftyStringExtension.h */,
+				FECE38021DA0F44C00D12632 /* Info.plist */,
+				FE6A0E2B1DA0FB5400195B68 /* Character.extension.swift */,
+				FECE38041DA0F44C00D12632 /* String.extension.swift */,
+				FE6A0E291DA0FB3800195B68 /* String.CharacterView.extension.swift */,
 			);
-			path = SwiftyStringExtension;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		FE3261841DA0F358002C5A7F /* SwiftyStringExtensionTests */ = {
+		FECE380A1DA0F47700D12632 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FE3261851DA0F358002C5A7F /* SwiftyStringExtensionTests.swift */,
-				FE3261871DA0F358002C5A7F /* Info.plist */,
+				FECE380B1DA0F47700D12632 /* Info.plist */,
+				FECE380C1DA0F47700D12632 /* CharacterTests.swift */,
+				FE6A0E2D1DA0FB9A00195B68 /* StringTests.swift */,
+				FE6A0E2F1DA0FBAF00195B68 /* String.CharacterViewTests.swift.swift */,
 			);
-			path = SwiftyStringExtensionTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +110,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3261881DA0F358002C5A7F /* SwiftyStringExtension.h in Headers */,
+				FECE380F1DA0F4FB00D12632 /* SwiftyStringExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +165,7 @@
 				TargetAttributes = {
 					FE3261761DA0F357002C5A7F = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					FE32617F1DA0F358002C5A7F = {
@@ -196,6 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6A0E2C1DA0FB5400195B68 /* Character.extension.swift in Sources */,
+				FE6A0E2A1DA0FB3800195B68 /* String.CharacterView.extension.swift in Sources */,
+				FECE38081DA0F44C00D12632 /* String.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3261861DA0F358002C5A7F /* SwiftyStringExtensionTests.swift in Sources */,
+				FE6A0E311DA0FBB400195B68 /* StringTests.swift in Sources */,
+				FE6A0E321DA0FBB700195B68 /* String.CharacterViewTests.swift.swift in Sources */,
+				FECE380E1DA0F47700D12632 /* CharacterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,17 +343,19 @@
 		FE32618C1DA0F358002C5A7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftyStringExtension/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.SwiftyStringExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,12 +363,13 @@
 		FE32618D1DA0F358002C5A7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftyStringExtension/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.SwiftyStringExtension;
@@ -356,7 +382,8 @@
 		FE32618F1DA0F358002C5A7F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = SwiftyStringExtensionTests/Info.plist;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.SwiftyStringExtensionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -367,7 +394,8 @@
 		FE3261901DA0F358002C5A7F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = SwiftyStringExtensionTests/Info.plist;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.SwiftyStringExtensionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -394,6 +422,7 @@
 				FE32618D1DA0F358002C5A7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE32618E1DA0F358002C5A7F /* Build configuration list for PBXNativeTarget "SwiftyStringExtensionTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +431,7 @@
 				FE3261901DA0F358002C5A7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

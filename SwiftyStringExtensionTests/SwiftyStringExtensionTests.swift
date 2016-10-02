@@ -1,36 +1,47 @@
 //
-//  SwiftyStringExtensionTests.swift
-//  SwiftyStringExtensionTests
+//  Tests.swift
+//  Tests
 //
 //  Created by mono on 2016/10/02.
 //  Copyright © 2016 mono. All rights reserved.
 //
 
 import XCTest
-@testable import SwiftyStringExtension
+import SwiftyStringExtension
 
-class SwiftyStringExtensionTests: XCTestCase {
+class Tests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testSuscript() {
+        XCTAssertEqual("foo"[sequentialAccess: 0..<0], "")
+        XCTAssertEqual("foo"[sequentialAccess: 0..<1], "f")
+        XCTAssertEqual("foo"[sequentialAccess: 0..<2], "fo")
+        XCTAssertEqual("foo"[sequentialAccess: 0..<3], "foo")
+        XCTAssertEqual("foo"[sequentialAccess: 1..<1], "")
+        XCTAssertEqual("foo"[sequentialAccess: 1..<2], "o")
+        XCTAssertEqual("foo"[sequentialAccess: 1..<3], "oo")
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testToAsciiCode() {
+        XCTAssertEqual("A".asciiCode, 65)
+        XCTAssertEqual("a".asciiCode, 97)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFromAsciiCode() {
+        XCTAssertEqual(Character(asciiCode: 65), "A")
+        XCTAssertEqual(Character(asciiCode: 97), "a")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testPrefix() {
+        let input = "12345"
+        XCTAssertEqual("1", input.prefix(upTo: input.index(input.startIndex, offsetBy: 1)))
+        XCTAssertEqual(input, input.prefix(6))
     }
     
+    func testRemoveBound() {
+        var s = "abcde"
+        s.removeFirst(2)
+        XCTAssertEqual(s, "cde")
+        s.removeLast(2)
+        XCTAssertEqual(s, "c")
+    }
 }
