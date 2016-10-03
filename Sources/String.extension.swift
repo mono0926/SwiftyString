@@ -56,6 +56,9 @@ extension String {
     }
     
     // MARK: - Convenient
+    public mutating func replace(of target: String, with replacement: String)  {
+        self = replacingOccurrences(of: target, with: replacement)
+    }
     public func addingUrlEncoding() -> String {
         return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     }

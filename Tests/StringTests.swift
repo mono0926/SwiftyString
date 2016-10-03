@@ -57,6 +57,13 @@ class StringTests: XCTestCase {
         XCTAssertNil(s2.makeRange(from: NSRange(location: 0, length: 50)))
     }
     
+    func testReplace() {
+        var s = "abcd"
+        s.replace(of: "cd", with: "ef")
+        XCTAssertEqual(s, "abef")
+        XCTAssertEqual(s, s.replacingOccurrences(of: "cd", with: "ef"))
+    }
+    
     func testAddingUrlEncoding() {
         let input1 = "abc"
         XCTAssertEqual(input1.addingUrlEncoding(), input1)
