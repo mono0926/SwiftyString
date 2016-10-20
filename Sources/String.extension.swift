@@ -68,6 +68,12 @@ extension String {
         }
         return self
     }
+    
+    public var capitalizingFirstLetter: String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    // MARK: - Static
     public static func isEmpty(_ s: String?) -> Bool {
         if let s = s {
             return s.isEmpty

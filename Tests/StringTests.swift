@@ -83,4 +83,10 @@ class StringTests: XCTestCase {
         XCTAssertTrue(String.isEmpty(nil))
         XCTAssertFalse(String.isEmpty("a"))
     }
+    
+    func testCapitalizingFirstLetter() {
+        XCTAssertEqual("aaBbCc".capitalizingFirstLetter, "AaBbCc")
+        XCTAssertEqual("AaBbCc".capitalizingFirstLetter, "AaBbCc")
+        XCTAssertEqual("aabbcc".capitalizingFirstLetter, "Aabbcc")
+    }
 }
