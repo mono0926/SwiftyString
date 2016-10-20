@@ -84,6 +84,15 @@ class StringTests: XCTestCase {
         XCTAssertFalse(String.isEmpty("a"))
     }
     
+    func testIsBatch() {
+        XCTAssertTrue("".isBatch())
+        XCTAssertTrue("a".isBatch())
+        XCTAssertTrue("aba".isBatch())
+        XCTAssertTrue("アニマルマニア".isBatch())
+        XCTAssertFalse("ab".isBatch())
+        XCTAssertFalse("(　´･‿･｀)".isBatch())
+    }
+    
     func testCapitalizingFirstLetter() {
         XCTAssertEqual("aaBbCc".capitalizingFirstLetter, "AaBbCc")
         XCTAssertEqual("AaBbCc".capitalizingFirstLetter, "AaBbCc")
