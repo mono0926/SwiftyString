@@ -1,9 +1,9 @@
 //: Playground - noun: a place where people can play
 
 #if os(OSX)
-import Cocoa
+    import Cocoa
 #elseif os(iOS)
-import UIKit
+    import UIKit
 #endif
 import SwiftyStringExtension
 
