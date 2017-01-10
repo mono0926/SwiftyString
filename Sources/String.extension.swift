@@ -69,21 +69,6 @@ extension String {
         return self
     }
     
-    public func isBatch() -> Bool {
-        var s1 = startIndex
-        var s2 = endIndex
-        if s1 == s2 { return true  }
-        repeat {
-            let s2Before = index(before: s2)
-            if self[s1] != self[s2Before] {
-                return false
-            }
-            s1 = index(after: s1)
-            s2 = s2Before
-        } while s1 != s1
-        return true
-    }
-    
     public var capitalizingFirstLetter: String {
         return prefix(1).capitalized + dropFirst()
     }
