@@ -224,7 +224,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftyStringExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.SwiftyStringExtension;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
@@ -246,7 +246,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwiftyStringExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mono0926.SwiftyStringExtension;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
