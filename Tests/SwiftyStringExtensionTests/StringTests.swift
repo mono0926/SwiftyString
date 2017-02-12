@@ -89,4 +89,8 @@ class StringTests: XCTestCase {
         XCTAssertEqual("AaBbCc".capitalizingFirstLetter, "AaBbCc")
         XCTAssertEqual("aabbcc".capitalizingFirstLetter, "Aabbcc")
     }
+
+    func testMultiplied() {
+        XCTAssertEqual("ab".multiplied(3), "ababab")
+    }
 }

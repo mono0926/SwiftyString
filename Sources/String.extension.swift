@@ -68,6 +68,9 @@ extension String {
         }
         return self
     }
+    public func multiplied(_ n: Int) -> String {
+        return (0..<n).reduce("") { return $0.0 + self }
+    }
     
     public var capitalizingFirstLetter: String {
         return prefix(1).capitalized + dropFirst()
