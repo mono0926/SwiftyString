@@ -93,4 +93,10 @@ class StringTests: XCTestCase {
     func testMultiplied() {
         XCTAssertEqual("ab".multiplied(3), "ababab")
     }
+    func testReplacingFirst() {
+        XCTAssertEqual("abcde".replacingFirst(2, with: "*"), "**cde")
+    }
+    func testReplacingLast() {
+        XCTAssertEqual("abcde".replacingLast(2, with: "*"), "abc**")
+    }
 }
