@@ -69,7 +69,7 @@ extension String {
         return self
     }
     public func multiplied(_ n: Int) -> String {
-        return (0..<n).reduce("") { return $0.0 + self }
+        return String(repeating: self, count: n)
     }
     public func replacingFirst(_ n: Int, with char: Character) -> String {
         return String(char).multiplied(n) + dropFirst(n)
