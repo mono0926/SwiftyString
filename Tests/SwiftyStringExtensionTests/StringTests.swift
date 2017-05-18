@@ -107,6 +107,7 @@ class StringTests: XCTestCase {
     }
 
     func testContainsEmoji() {
+        XCTAssertFalse("".containsEmoji)
         XCTAssertFalse("a".containsEmoji)
         XCTAssertTrue("🐶".containsEmoji)
         XCTAssertTrue("a🐶".containsEmoji)
@@ -114,6 +115,7 @@ class StringTests: XCTestCase {
     }
 
     func testContainsOnlyEmoji() {
+        XCTAssertFalse("".containsOnlyEmoji)
         XCTAssertFalse("a".containsOnlyEmoji)
         XCTAssertTrue("🐶".containsOnlyEmoji)
         XCTAssertFalse("a🐶".containsOnlyEmoji)

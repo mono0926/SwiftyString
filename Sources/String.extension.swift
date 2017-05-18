@@ -93,7 +93,9 @@ extension String {
 
     public var isSingleEmoji: Bool { return glyphCount == 1 && containsEmoji }
     public var containsEmoji: Bool { return !unicodeScalars.filter { $0.isEmoji }.isEmpty }
-    public var containsOnlyEmoji: Bool { return unicodeScalars.first { !$0.isEmoji && !$0.isZeroWidthJoiner } == nil }
+    public var containsOnlyEmoji: Bool { return
+        !isEmpty && unicodeScalars.first { !$0.isEmoji && !$0.isZeroWidthJoiner } == nil
+    }
     public var emojiString: String { return emojiScalars.map { String($0) }.joined(separator: "") }
     public var emojis: [String] {
         var scalars: [[UnicodeScalar]] = []
