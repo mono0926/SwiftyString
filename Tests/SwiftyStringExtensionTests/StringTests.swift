@@ -99,4 +99,24 @@ class StringTests: XCTestCase {
     func testReplacingLast() {
         XCTAssertEqual("abcde".replacingLast(2, with: "*"), "abc**")
     }
+
+    func testIsSingleEmoji() {
+        XCTAssertFalse("a".isSingleEmoji)
+        XCTAssertTrue("🐶".isSingleEmoji)
+        XCTAssertTrue("👨‍👩‍👧‍👧".isSingleEmoji)
+    }
+
+    func testContainsEmoji() {
+        XCTAssertFalse("a".containsEmoji)
+        XCTAssertTrue("🐶".containsEmoji)
+        XCTAssertTrue("a🐶".containsEmoji)
+        XCTAssertTrue("👨‍👩‍👧‍👧".containsEmoji)
+    }
+
+    func testContainsOnlyEmoji() {
+        XCTAssertFalse("a".containsOnlyEmoji)
+        XCTAssertTrue("🐶".containsOnlyEmoji)
+        XCTAssertFalse("a🐶".containsOnlyEmoji)
+        XCTAssertTrue("👨‍👩‍👧‍👧".containsOnlyEmoji)
+    }
 }

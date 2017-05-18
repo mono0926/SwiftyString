@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "OBJ_30"
                BuildableName = "SwiftyStringExtensionTests.xctest"
-               BlueprintName = "SwiftyStringExtensionTests"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
             </BuildableReference>
          </TestableReference>

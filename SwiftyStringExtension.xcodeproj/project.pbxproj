@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE5226AF1ECD557800118252 /* UnicodeScalar.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */; };
+		FE5226B21ECD55EC00118252 /* UnicodeScalarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */; };
 		OBJ_26 /* Character.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Character.extension.swift */; };
 		OBJ_27 /* String.CharacterView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* String.CharacterView.extension.swift */; };
 		OBJ_28 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* String.extension.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeScalar.extension.swift; sourceTree = "<group>"; };
+		FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeScalarExtensionTests.swift; sourceTree = "<group>"; };
 		FEA06E391DE2B58E00270E2B /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		OBJ_10 /* String.CharacterView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.CharacterView.extension.swift; sourceTree = "<group>"; };
 		OBJ_11 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
@@ -35,7 +39,7 @@
 		OBJ_16 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
 		OBJ_19 /* SwiftyStringExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyStringExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_20 /* SwiftyStringExtensionTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwiftyStringExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_20 /* SwiftyStringExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SwiftyStringExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Character.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +77,7 @@
 				OBJ_14 /* CharacterTests.swift */,
 				OBJ_15 /* String.CharacterViewTests.swift.swift */,
 				OBJ_16 /* StringTests.swift */,
+				FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */,
 			);
 			name = SwiftyStringExtensionTests;
 			path = Tests/SwiftyStringExtensionTests;
@@ -113,6 +118,7 @@
 				OBJ_9 /* Character.extension.swift */,
 				OBJ_10 /* String.CharacterView.extension.swift */,
 				OBJ_11 /* String.extension.swift */,
+				FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */,
 			);
 			name = SwiftyStringExtension;
 			path = Sources;
@@ -137,9 +143,9 @@
 			productReference = OBJ_19 /* SwiftyStringExtension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		OBJ_30 /* SwiftyStringExtensionTests */ = {
+		OBJ_30 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_31 /* Build configuration list for PBXNativeTarget "SwiftyStringExtensionTests" */;
+			buildConfigurationList = OBJ_31 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				OBJ_34 /* Sources */,
 				OBJ_38 /* Frameworks */,
@@ -149,7 +155,7 @@
 			dependencies = (
 				OBJ_40 /* PBXTargetDependency */,
 			);
-			name = SwiftyStringExtensionTests;
+			name = Tests;
 			productName = SwiftyStringExtensionTests;
 			productReference = OBJ_20 /* SwiftyStringExtensionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -175,7 +181,7 @@
 			projectRoot = "";
 			targets = (
 				OBJ_21 /* SwiftyStringExtension */,
-				OBJ_30 /* SwiftyStringExtensionTests */,
+				OBJ_30 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FE5226AF1ECD557800118252 /* UnicodeScalar.extension.swift in Sources */,
 				OBJ_26 /* Character.extension.swift in Sources */,
 				OBJ_27 /* String.CharacterView.extension.swift in Sources */,
 				OBJ_28 /* String.extension.swift in Sources */,
@@ -198,6 +205,7 @@
 				OBJ_35 /* CharacterTests.swift in Sources */,
 				OBJ_36 /* String.CharacterViewTests.swift.swift in Sources */,
 				OBJ_37 /* StringTests.swift in Sources */,
+				FE5226B21ECD55EC00118252 /* UnicodeScalarExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +357,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_31 /* Build configuration list for PBXNativeTarget "SwiftyStringExtensionTests" */ = {
+		OBJ_31 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_32 /* Debug */,
