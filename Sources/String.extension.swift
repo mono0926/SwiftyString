@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreText
 
 // Enable collection operation
 extension String: BidirectionalCollection, RangeReplaceableCollection {}
