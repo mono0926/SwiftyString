@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftyStringExtension
+import SwiftyString
 
 class CharacterViewTests: XCTestCase {
     

@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "OBJ_21"
                BuildableName = "SwiftyStringExtension.framework"
-               BlueprintName = "SwiftyStringExtension"
-               ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
+               BlueprintName = "SwiftyString"
+               ReferencedContainer = "container:SwiftyString.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "OBJ_30"
                BuildableName = "SwiftyStringExtensionTests.xctest"
                BlueprintName = "Tests"
-               ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
+               ReferencedContainer = "container:SwiftyString.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "OBJ_21"
             BuildableName = "SwiftyStringExtension.framework"
-            BlueprintName = "SwiftyStringExtension"
-            ReferencedContainer = "container:SwiftyStringExtension.xcodeproj">
+            BlueprintName = "SwiftyString"
+            ReferencedContainer = "container:SwiftyString.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>

@@ -5,7 +5,7 @@
 #elseif os(iOS)
     import UIKit
 #endif
-import SwiftyStringExtension
+import SwiftyString
 
 var str = "Hello, playground"
 str[sequentialAccess: 1..<3]

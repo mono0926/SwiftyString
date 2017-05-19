@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-import SwiftyStringExtension
+import SwiftyString
 
 class UnicodeScalarExtensionTests: XCTestCase {
     func testIsEmoji() {

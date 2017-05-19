@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import SwiftyStringExtension
+import SwiftyString
 import Foundation
 
 class StringTests: XCTestCase {
