@@ -12,34 +12,47 @@ import CoreText
 // Enable collection operation
 extension String: BidirectionalCollection, RangeReplaceableCollection {}
 
+extension String: ExtensionCompatible {}
+extension Optional: ExtensionCompatible {}
+
+extension Extension where Base == Optional<String> {
+    public var isEmpty: Bool { return base?.isEmpty ?? true }
+}
+
 extension String {
-    
-    // MARK: - Subscript
-    public subscript(sequentialAccess range: Range<Int>) -> String {
-        return String(characters[sequentialAccess: range])
-    }
-    
-    public subscript(sequentialAccess index: Int) -> String {
-        return self[sequentialAccess: index..<index + 1]
-    }
-    
-    // MARK: - Other    
-    public var asciiCode: UInt32? {
-        if unicodeScalars.index(after: unicodeScalars.startIndex) != unicodeScalars.endIndex { return nil }
-        return characters.first?.asciiCode
-    }
-    
     // MARK: - Bug?
     public mutating func removeFirst(_ n: Int) {
         characters.removeFirst(n)
     }
-    
     public mutating func removeLast(_ n: Int) {
         characters.removeLast(n)
+    }
+    // MARK: - Convenient
+    public mutating func replace(of target: String, with replacement: String)  {
+        self = replacingOccurrences(of: target, with: replacement)
+    }
+}
+
+extension Extension where Base == String {
+    
+    // MARK: - Subscript
+    public subscript(range: Range<Int>) -> String {
+        return String(base.characters.ss[range])
+    }
+    
+    public subscript(index: Int) -> String {
+        return self[index..<index + 1]
+    }
+    
+    // MARK: - Other    
+    public var asciiCode: UInt32? {
+        if base.unicodeScalars.index(after: base.unicodeScalars.startIndex) != base.unicodeScalars.endIndex { return nil }
+        return base.characters.first?.ss.asciiCode
     }
     
     // MARK: - Range
     public func makeNSRange(from range: Range<String.Index>) -> NSRange {
+        let utf16 = base.utf16
         let from = range.lowerBound.samePosition(in: utf16)
         let to = range.upperBound.samePosition(in: utf16)
         return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),
@@ -47,54 +60,52 @@ extension String {
     }
     
     public func makeRange(from range: NSRange) -> Range<String.Index>? {
+        let utf16 = base.utf16
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: range.location, limitedBy: utf16.endIndex),
             let to16 = utf16.index(from16, offsetBy: range.length, limitedBy: utf16.endIndex),
-            let from = String.Index(from16, within: self),
-            let to = String.Index(to16, within: self)
+            let from = String.Index(from16, within: base),
+            let to = String.Index(to16, within: base)
             else { return nil }
         return from ..< to
     }
     
     // MARK: - Convenient
-    public mutating func replace(of target: String, with replacement: String)  {
-        self = replacingOccurrences(of: target, with: replacement)
-    }
     public func addingUrlEncoding() -> String {
-        return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        return base.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     }
     public func getValueOrNil() -> String? {
-        if String.isEmpty(self) {
+        if base.isEmpty {
             return nil
         }
-        return self
+        return base
     }
     public func multiplied(_ n: Int) -> String {
-        return String(repeating: self, count: n)
+        return String(repeating: base, count: n)
     }
     public func replacingFirst(_ n: Int, with char: Character) -> String {
-        return String(char).multiplied(n) + dropFirst(n)
+        return String(char).ss.multiplied(n) + base.dropFirst(n)
     }
     public func replacingLast(_ n: Int, with char: Character) -> String {
-        return dropLast(n) + String(char).multiplied(n)
+        return base.dropLast(n) + String(char).ss.multiplied(n)
     }
     
     public var capitalizingFirstLetter: String {
-        return prefix(1).capitalized + dropFirst()
+        return base.prefix(1).capitalized + base.dropFirst()
     }
 
     // MARK: - Emoji
 
     public var glyphCount: Int {
-        let richText = NSAttributedString(string: self)
+        let richText = NSAttributedString(string: base)
         let line = CTLineCreateWithAttributedString(richText)
         return CTLineGetGlyphCount(line)
     }
 
     public var isSingleEmoji: Bool { return glyphCount == 1 && containsEmoji }
-    public var containsEmoji: Bool { return !unicodeScalars.filter { $0.isEmoji }.isEmpty }
+    public var containsEmoji: Bool { return !base.unicodeScalars.filter { $0.ss.isEmoji }.isEmpty }
     public var containsOnlyEmoji: Bool { return
-        !isEmpty && unicodeScalars.first { !$0.isEmoji && !$0.isZeroWidthJoiner } == nil
+        !base.isEmpty && base.unicodeScalars.first { !$0.ss.isEmoji && !$0.ss.isZeroWidthJoiner } == nil
     }
     public var emojiString: String { return emojiScalars.map { String($0) }.joined(separator: "") }
     public var emojis: [String] {
@@ -102,7 +113,7 @@ extension String {
         var currentScalarSet: [UnicodeScalar] = []
         var previousScalar: UnicodeScalar?
         for scalar in emojiScalars {
-            if let prev = previousScalar, !prev.isZeroWidthJoiner && !scalar.isZeroWidthJoiner {
+            if let prev = previousScalar, !prev.ss.isZeroWidthJoiner && !scalar.ss.isZeroWidthJoiner {
                 scalars.append(currentScalarSet)
                 currentScalarSet = []
             }
@@ -116,23 +127,15 @@ extension String {
     fileprivate var emojiScalars: [UnicodeScalar] {
         var chars: [UnicodeScalar] = []
         var previous: UnicodeScalar?
-        for cur in unicodeScalars {
-            if let previous = previous, previous.isZeroWidthJoiner && cur.isEmoji {
+        for cur in base.unicodeScalars {
+            if let previous = previous, previous.ss.isZeroWidthJoiner && cur.ss.isEmoji {
                 chars.append(previous)
                 chars.append(cur)
-            } else if cur.isEmoji {
+            } else if cur.ss.isEmoji {
                 chars.append(cur)
             }
             previous = cur
         }
         return chars
-    }
-    
-    // MARK: - Static
-    public static func isEmpty(_ s: String?) -> Bool {
-        if let s = s {
-            return s.isEmpty
-        }
-        return true
     }
 }

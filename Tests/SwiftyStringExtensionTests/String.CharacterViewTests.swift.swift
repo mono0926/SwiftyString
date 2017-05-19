@@ -13,7 +13,7 @@ class CharacterViewTests: XCTestCase {
     
     func testSuscript() {
         let input = "abcd".characters
-        XCTAssertTrue("bc".characters.elementsEqual(input[sequentialAccess: 1..<3]))
-        XCTAssertEqual(input[sequentialAccess: 3], "d")
+        XCTAssertTrue("bc".characters.elementsEqual(input.ss[1..<3]))
+        XCTAssertEqual(input.ss[3], "d")
     }
 }

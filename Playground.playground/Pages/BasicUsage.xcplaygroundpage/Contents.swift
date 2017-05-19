@@ -8,4 +8,4 @@
 import SwiftyString
 
 var str = "Hello, playground"
-str[sequentialAccess: 1..<3]
+str.ss[1..<3]

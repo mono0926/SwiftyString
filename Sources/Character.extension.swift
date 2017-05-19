@@ -8,17 +8,20 @@
 
 import Foundation
 
-extension Character
-{
+extension Character: ExtensionCompatible {}
+
+extension Character {
     public init?(asciiCode: UInt32) {
         guard let scalar = UnicodeScalar(asciiCode), scalar.isASCII else {
             return nil
         }
         self = Character(scalar)
     }
-    
+}
+
+extension Extension where Base == Character {
     public var unicodeScalar: UnicodeScalar {
-        let characterString = String(self)
+        let characterString = String(base)
         let scalars = characterString.unicodeScalars
         // more than one scalar is not possible
         assert(scalars.index(after: scalars.startIndex) == scalars.endIndex)
