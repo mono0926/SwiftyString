@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FE5226AF1ECD557800118252 /* UnicodeScalar.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */; };
 		FE5226B21ECD55EC00118252 /* UnicodeScalarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */; };
-		FE6AA8F11ECE854D00FCF6D5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6AA8F01ECE854D00FCF6D5 /* Extension.swift */; };
 		OBJ_26 /* Character.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Character.extension.swift */; };
 		OBJ_27 /* String.CharacterView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* String.CharacterView.extension.swift */; };
 		OBJ_28 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* String.extension.swift */; };
@@ -32,7 +31,6 @@
 /* Begin PBXFileReference section */
 		FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeScalar.extension.swift; sourceTree = "<group>"; };
 		FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeScalarExtensionTests.swift; sourceTree = "<group>"; };
-		FE6AA8F01ECE854D00FCF6D5 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FEA06E391DE2B58E00270E2B /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		OBJ_10 /* String.CharacterView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.CharacterView.extension.swift; sourceTree = "<group>"; };
 		OBJ_11 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
@@ -65,14 +63,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE6AA8EF1ECE850700FCF6D5 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				FE6AA8F01ECE854D00FCF6D5 /* Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		OBJ_12 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +107,6 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FE6AA8EF1ECE850700FCF6D5 /* Extension */,
 				OBJ_8 /* SwiftyString */,
 			);
 			path = Sources;
@@ -202,7 +191,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				FE6AA8F11ECE854D00FCF6D5 /* Extension.swift in Sources */,
 				FE5226AF1ECD557800118252 /* UnicodeScalar.extension.swift in Sources */,
 				OBJ_26 /* Character.extension.swift in Sources */,
 				OBJ_27 /* String.CharacterView.extension.swift in Sources */,

@@ -8,8 +8,6 @@
 
 import Foundation
 
-extension Character: ExtensionCompatible {}
-
 extension Character {
     public init?(asciiCode: UInt32) {
         guard let scalar = UnicodeScalar(asciiCode), scalar.isASCII else {
@@ -19,9 +17,9 @@ extension Character {
     }
 }
 
-extension Extension where Base == Character {
+extension Character {
     public var unicodeScalar: UnicodeScalar {
-        let characterString = String(base)
+        let characterString = String(self)
         let scalars = characterString.unicodeScalars
         // more than one scalar is not possible
         assert(scalars.index(after: scalars.startIndex) == scalars.endIndex)
