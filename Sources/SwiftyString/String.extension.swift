@@ -28,22 +28,22 @@ extension String {
 }
 
 extension String {
-    
+
     // MARK: - Subscript
     public subscript(sequentialAccess range: Range<Int>) -> String {
         return String(characters[sequentialAccess: range])
     }
-    
+
     public subscript(sequentialAccess index: Int) -> String {
         return self[sequentialAccess: index..<index + 1]
     }
-    
-    // MARK: - Other    
+
+    // MARK: - Other
     public var asciiCode: UInt32? {
         if unicodeScalars.index(after: unicodeScalars.startIndex) != unicodeScalars.endIndex { return nil }
         return characters.first?.asciiCode
     }
-    
+
     // MARK: - Range
     public func makeNSRange(from range: Range<String.Index>) -> NSRange {
         let from = range.lowerBound.samePosition(in: utf16)
@@ -51,7 +51,7 @@ extension String {
         return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),
                        length: utf16.distance(from: from, to: to))
     }
-    
+
     public func makeRange(from range: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: range.location, limitedBy: utf16.endIndex),
@@ -61,7 +61,7 @@ extension String {
             else { return nil }
         return from ..< to
     }
-    
+
     // MARK: - Convenient
     public func addingUrlEncoding() -> String {
         return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -81,7 +81,7 @@ extension String {
     public func replacingLast(_ n: Int, with char: Character) -> String {
         return dropLast(n) + String(char).multiplied(n)
     }
-    
+
     public var capitalizingFirstLetter: String {
         return prefix(1).capitalized + dropFirst()
     }
@@ -131,3 +131,4 @@ extension String {
         return chars
     }
 }
+

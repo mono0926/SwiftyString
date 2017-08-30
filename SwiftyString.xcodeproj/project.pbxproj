@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		FE5226AF1ECD557800118252 /* UnicodeScalar.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */; };
 		FE5226B21ECD55EC00118252 /* UnicodeScalarExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */; };
+		FE621CAC1F56928500632C30 /* CamelCasedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CAB1F56928500632C30 /* CamelCasedString.swift */; };
+		FE621CAE1F56929800632C30 /* CasedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CAD1F56929800632C30 /* CasedString.swift */; };
+		FE621CB11F5692ED00632C30 /* SnakeCasedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CB01F5692ED00632C30 /* SnakeCasedString.swift */; };
+		FE621CB31F56943C00632C30 /* CasedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CB21F56943C00632C30 /* CasedStringTests.swift */; };
 		OBJ_26 /* Character.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Character.extension.swift */; };
 		OBJ_27 /* String.CharacterView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* String.CharacterView.extension.swift */; };
 		OBJ_28 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* String.extension.swift */; };
@@ -31,6 +35,10 @@
 /* Begin PBXFileReference section */
 		FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeScalar.extension.swift; sourceTree = "<group>"; };
 		FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeScalarExtensionTests.swift; sourceTree = "<group>"; };
+		FE621CAB1F56928500632C30 /* CamelCasedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamelCasedString.swift; sourceTree = "<group>"; };
+		FE621CAD1F56929800632C30 /* CasedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasedString.swift; sourceTree = "<group>"; };
+		FE621CB01F5692ED00632C30 /* SnakeCasedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeCasedString.swift; sourceTree = "<group>"; };
+		FE621CB21F56943C00632C30 /* CasedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasedStringTests.swift; sourceTree = "<group>"; };
 		FEA06E391DE2B58E00270E2B /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		OBJ_10 /* String.CharacterView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.CharacterView.extension.swift; sourceTree = "<group>"; };
 		OBJ_11 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
@@ -63,6 +71,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE621CAF1F5692A800632C30 /* CasedString */ = {
+			isa = PBXGroup;
+			children = (
+				FE621CAB1F56928500632C30 /* CamelCasedString.swift */,
+				FE621CAD1F56929800632C30 /* CasedString.swift */,
+				FE621CB01F5692ED00632C30 /* SnakeCasedString.swift */,
+			);
+			path = CasedString;
+			sourceTree = "<group>";
+		};
 		OBJ_12 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +96,10 @@
 				OBJ_15 /* String.CharacterViewTests.swift.swift */,
 				OBJ_16 /* StringTests.swift */,
 				FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */,
+				FE621CB21F56943C00632C30 /* CasedStringTests.swift */,
 			);
 			name = SwiftyStringExtensionTests;
-			path = Tests/SwiftyStringExtensionTests;
+			path = Tests/SwiftyStringTests;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_18 /* Products */ = {
@@ -115,13 +134,14 @@
 		OBJ_8 /* SwiftyString */ = {
 			isa = PBXGroup;
 			children = (
+				FE621CAF1F5692A800632C30 /* CasedString */,
 				OBJ_9 /* Character.extension.swift */,
 				OBJ_10 /* String.CharacterView.extension.swift */,
 				OBJ_11 /* String.extension.swift */,
 				FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */,
 			);
 			name = SwiftyString;
-			path = Sources;
+			path = Sources/SwiftyString;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -191,10 +211,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FE621CAC1F56928500632C30 /* CamelCasedString.swift in Sources */,
+				FE621CAE1F56929800632C30 /* CasedString.swift in Sources */,
 				FE5226AF1ECD557800118252 /* UnicodeScalar.extension.swift in Sources */,
 				OBJ_26 /* Character.extension.swift in Sources */,
 				OBJ_27 /* String.CharacterView.extension.swift in Sources */,
 				OBJ_28 /* String.extension.swift in Sources */,
+				FE621CB11F5692ED00632C30 /* SnakeCasedString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +226,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_35 /* CharacterTests.swift in Sources */,
+				FE621CB31F56943C00632C30 /* CasedStringTests.swift in Sources */,
 				OBJ_36 /* String.CharacterViewTests.swift.swift in Sources */,
 				OBJ_37 /* StringTests.swift in Sources */,
 				FE5226B21ECD55EC00118252 /* UnicodeScalarExtensionTests.swift in Sources */,
