@@ -30,12 +30,12 @@ extension String {
 extension String {
     
     // MARK: - Subscript
-    public subscript(range: Range<Int>) -> String {
-        return String(base.characters.ss[range])
+    public subscript(sequentialAccess range: Range<Int>) -> String {
+        return String(characters[sequentialAccess: range])
     }
     
-    public subscript(index: Int) -> String {
-        return self[index..<index + 1]
+    public subscript(sequentialAccess index: Int) -> String {
+        return self[sequentialAccess: index..<index + 1]
     }
     
     // MARK: - Other    
