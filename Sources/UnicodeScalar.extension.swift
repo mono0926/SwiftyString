@@ -8,11 +8,11 @@
 
 import Foundation
 
-extension UnicodeScalar: ExtensionCompatible {}
+extension UnicodeScalar {}
 
-extension Extension where Base == UnicodeScalar {
+extension UnicodeScalar {
     public var isEmoji: Bool {
-        switch base.value {
+        switch value {
         case 0x3030, 0x00AE, 0x00A9, // Special Characters
         0x1D000 ... 0x1F77F, // Emoticons
         0x2100 ... 0x27BF, // Misc symbols and Dingbats
@@ -22,5 +22,5 @@ extension Extension where Base == UnicodeScalar {
         default: return false
         }
     }
-    public var isZeroWidthJoiner: Bool { return base.value == 8205 }
+    public var isZeroWidthJoiner: Bool { return value == 8205 }
 }

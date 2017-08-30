@@ -8,19 +8,17 @@
 
 import Foundation
 
-extension String.CharacterView: ExtensionCompatible {}
-
-extension Extension where Base == String.CharacterView {
+extension String.CharacterView {
     
-    public subscript(range: Range<Int>) -> String.CharacterView {
+    public subscript(sequentialAccess range: Range<Int>) -> String.CharacterView {
         let lower = range.lowerBound
-        let startIndex = base.index(base.startIndex, offsetBy: lower)
-        let endIndex = base.index(startIndex, offsetBy: range.count)
-        return base[startIndex..<endIndex]
+        let startIndex = index(self.startIndex, offsetBy: lower)
+        let endIndex = index(startIndex, offsetBy: range.count)
+        return self[startIndex..<endIndex]
     }
     
-    public subscript(index: Int) -> Character {
-        return self[index..<index + 1].first!
+    public subscript(sequentialAccess index: Int) -> Character {
+        return self[sequentialAccess: index..<index + 1].first!
     }
     
 }

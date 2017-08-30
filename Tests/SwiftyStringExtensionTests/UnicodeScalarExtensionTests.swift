@@ -12,8 +12,8 @@ import SwiftyString
 
 class UnicodeScalarExtensionTests: XCTestCase {
     func testIsEmoji() {
-        XCTAssertFalse("a".unicodeScalars.first!.ss.isEmoji)
-        XCTAssertTrue("🐶".unicodeScalars.first!.ss.isEmoji)
-        XCTAssertTrue("👨‍👩‍👧‍👧".unicodeScalars.first!.ss.isEmoji)
+        XCTAssertFalse("a".unicodeScalars.first!.isEmoji)
+        XCTAssertTrue("🐶".unicodeScalars.first!.isEmoji)
+        XCTAssertTrue("👨‍👩‍👧‍👧".unicodeScalars.first!.isEmoji)
     }
 }
