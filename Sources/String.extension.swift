@@ -9,9 +9,6 @@
 import Foundation
 import CoreText
 
-// Enable collection operation
-extension String: BidirectionalCollection, RangeReplaceableCollection {}
-
 extension String: ExtensionCompatible {}
 extension Optional: ExtensionCompatible {}
 
