@@ -19,7 +19,7 @@ public struct SnakeCasedString: CasedString {
         return CamelCasedString(description
             .components(separatedBy: "_")
             .enumerated()
-            .map {0 == $0 ? $1 : $1.capitalized}
+            .map { i, s in i == 0 ? s : s.capitalized}
             .joined())! // TODO: should be nil or throws🤔
     }
     public func validate() throws {
