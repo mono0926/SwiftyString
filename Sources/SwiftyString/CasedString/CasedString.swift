@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol CasedString: LosslessStringConvertible, ExpressibleByStringLiteral {
+public protocol CasedString: LosslessStringConvertible, ExpressibleByStringLiteral, Equatable {
     // 無くて良いかも
     func validate() throws
 }

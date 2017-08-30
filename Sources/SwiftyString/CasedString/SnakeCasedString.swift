@@ -15,14 +15,17 @@ public struct SnakeCasedString: CasedString {
     public init(stringLiteral description: String) {
         self.description = description
     }
-    public func camelCased() -> String {
-        return description
+    public func camelCased() -> CamelCasedString {
+        return CamelCasedString(description
             .components(separatedBy: "_")
             .enumerated()
             .map {0 == $0 ? $1 : $1.capitalized}
-            .joined()
+            .joined())! // TODO: should be nil or throws🤔
     }
     public func validate() throws {
         // TODO: validate to be SnakeCase
+    }
+    public static func ==(lhs: SnakeCasedString, rhs: SnakeCasedString) -> Bool {
+        return lhs.description == rhs.description
     }
 }
