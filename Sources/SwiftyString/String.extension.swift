@@ -44,24 +44,6 @@ extension String {
         return characters.first?.asciiCode
     }
 
-    // MARK: - Range
-    public func makeNSRange(from range: Range<String.Index>) -> NSRange {
-        let from = range.lowerBound.samePosition(in: utf16)
-        let to = range.upperBound.samePosition(in: utf16)
-        return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),
-                       length: utf16.distance(from: from, to: to))
-    }
-
-    public func makeRange(from range: NSRange) -> Range<String.Index>? {
-        guard
-            let from16 = utf16.index(utf16.startIndex, offsetBy: range.location, limitedBy: utf16.endIndex),
-            let to16 = utf16.index(from16, offsetBy: range.length, limitedBy: utf16.endIndex),
-            let from = String.Index(from16, within: self),
-            let to = String.Index(to16, within: self)
-            else { return nil }
-        return from ..< to
-    }
-
     // MARK: - Convenient
     public func addingUrlEncoding() -> String {
         return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!

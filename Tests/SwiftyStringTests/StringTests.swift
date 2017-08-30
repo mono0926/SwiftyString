@@ -42,21 +42,6 @@ class StringTests: XCTestCase {
         XCTAssertEqual(s, "c")
     }
     
-    func testToNSRange() {
-        let s1 = "abcd"
-        XCTAssertEqual(s1.makeNSRange(from: s1.startIndex..<s1.index(s1.startIndex, offsetBy: 2)).toRange()!, 0..<2)
-        let s2 = "1️⃣2️⃣3️⃣4️⃣"
-        XCTAssertEqual(s2.makeNSRange(from: s2.startIndex..<s2.index(s2.startIndex, offsetBy: 2)).toRange()!, 0..<6)
-    }
-    
-    func testToRange() {
-        let s1 = "abcd"
-        XCTAssertEqual(s1.makeRange(from: NSRange(location: 0, length: 2)), s1.startIndex..<s1.index(s1.startIndex, offsetBy: 2))
-        let s2 = "1️⃣2️⃣3️⃣4️⃣"
-        XCTAssertEqual(s2.makeRange(from: NSRange(location: 0, length: 6)), s2.startIndex..<s2.index(s2.startIndex, offsetBy: 2))
-        XCTAssertNil(s2.makeRange(from: NSRange(location: 0, length: 50)))
-    }
-    
     func testReplace() {
         var s = "abcd"
         s.replace(of: "cd", with: "ef")
