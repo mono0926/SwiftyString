@@ -14,10 +14,8 @@
 		FE621CB11F5692ED00632C30 /* SnakeCasedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CB01F5692ED00632C30 /* SnakeCasedString.swift */; };
 		FE621CB31F56943C00632C30 /* CasedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CB21F56943C00632C30 /* CasedStringTests.swift */; };
 		OBJ_26 /* Character.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Character.extension.swift */; };
-		OBJ_27 /* String.CharacterView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* String.CharacterView.extension.swift */; };
 		OBJ_28 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* String.extension.swift */; };
 		OBJ_35 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CharacterTests.swift */; };
-		OBJ_36 /* String.CharacterViewTests.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* String.CharacterViewTests.swift.swift */; };
 		OBJ_37 /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* StringTests.swift */; };
 		OBJ_39 /* SwiftyString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* SwiftyString.framework */; };
 /* End PBXBuildFile section */
@@ -40,10 +38,8 @@
 		FE621CB01F5692ED00632C30 /* SnakeCasedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeCasedString.swift; sourceTree = "<group>"; };
 		FE621CB21F56943C00632C30 /* CasedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasedStringTests.swift; sourceTree = "<group>"; };
 		FEA06E391DE2B58E00270E2B /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
-		OBJ_10 /* String.CharacterView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.CharacterView.extension.swift; sourceTree = "<group>"; };
 		OBJ_11 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
 		OBJ_14 /* CharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
-		OBJ_15 /* String.CharacterViewTests.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.CharacterViewTests.swift.swift; sourceTree = "<group>"; };
 		OBJ_16 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
 		OBJ_17 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
 		OBJ_19 /* SwiftyString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* CharacterTests.swift */,
-				OBJ_15 /* String.CharacterViewTests.swift.swift */,
 				OBJ_16 /* StringTests.swift */,
 				FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */,
 				FE621CB21F56943C00632C30 /* CasedStringTests.swift */,
@@ -136,7 +131,6 @@
 			children = (
 				FE621CAF1F5692A800632C30 /* CasedString */,
 				OBJ_9 /* Character.extension.swift */,
-				OBJ_10 /* String.CharacterView.extension.swift */,
 				OBJ_11 /* String.extension.swift */,
 				FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */,
 			);
@@ -223,7 +217,6 @@
 				FE621CAE1F56929800632C30 /* CasedString.swift in Sources */,
 				FE5226AF1ECD557800118252 /* UnicodeScalar.extension.swift in Sources */,
 				OBJ_26 /* Character.extension.swift in Sources */,
-				OBJ_27 /* String.CharacterView.extension.swift in Sources */,
 				OBJ_28 /* String.extension.swift in Sources */,
 				FE621CB11F5692ED00632C30 /* SnakeCasedString.swift in Sources */,
 			);
@@ -235,7 +228,6 @@
 			files = (
 				OBJ_35 /* CharacterTests.swift in Sources */,
 				FE621CB31F56943C00632C30 /* CasedStringTests.swift in Sources */,
-				OBJ_36 /* String.CharacterViewTests.swift.swift in Sources */,
 				OBJ_37 /* StringTests.swift in Sources */,
 				FE5226B21ECD55EC00118252 /* UnicodeScalarExtensionTests.swift in Sources */,
 			);

@@ -7,20 +7,12 @@
 //
 
 import Foundation
-import CoreText
 
 extension Optional where Wrapped == String {
     public var isEmpty: Bool { return self?.isEmpty ?? true }
 }
 
 extension String {
-    // MARK: - Bug?
-    public mutating func removeFirst(_ n: Int) {
-        characters.removeFirst(n)
-    }
-    public mutating func removeLast(_ n: Int) {
-        characters.removeLast(n)
-    }
     // MARK: - Convenient
     public mutating func replace(of target: String, with replacement: String)  {
         self = replacingOccurrences(of: target, with: replacement)
@@ -31,7 +23,10 @@ extension String {
 
     // MARK: - Subscript
     public subscript(sequentialAccess range: Range<Int>) -> String {
-        return String(characters[sequentialAccess: range])
+        let lower = range.lowerBound
+        let startIndex = index(self.startIndex, offsetBy: lower)
+        let endIndex = index(startIndex, offsetBy: range.count)
+        return String(self[startIndex..<endIndex])
     }
 
     public subscript(sequentialAccess index: Int) -> String {
@@ -41,7 +36,7 @@ extension String {
     // MARK: - Other
     public var asciiCode: UInt32? {
         if unicodeScalars.index(after: unicodeScalars.startIndex) != unicodeScalars.endIndex { return nil }
-        return characters.first?.asciiCode
+        return first?.asciiCode
     }
 
     // MARK: - Convenient
