@@ -13,6 +13,7 @@
 		FE621CAE1F56929800632C30 /* CasedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CAD1F56929800632C30 /* CasedString.swift */; };
 		FE621CB11F5692ED00632C30 /* SnakeCasedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CB01F5692ED00632C30 /* SnakeCasedString.swift */; };
 		FE621CB31F56943C00632C30 /* CasedStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE621CB21F56943C00632C30 /* CasedStringTests.swift */; };
+		FECDF26C1F811356009AF2C9 /* Substring.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDF26B1F811356009AF2C9 /* Substring.extension.swift */; };
 		OBJ_26 /* Character.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Character.extension.swift */; };
 		OBJ_28 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* String.extension.swift */; };
 		OBJ_35 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CharacterTests.swift */; };
@@ -38,6 +39,7 @@
 		FE621CB01F5692ED00632C30 /* SnakeCasedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeCasedString.swift; sourceTree = "<group>"; };
 		FE621CB21F56943C00632C30 /* CasedStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasedStringTests.swift; sourceTree = "<group>"; };
 		FEA06E391DE2B58E00270E2B /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
+		FECDF26B1F811356009AF2C9 /* Substring.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Substring.extension.swift; sourceTree = "<group>"; };
 		OBJ_11 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
 		OBJ_14 /* CharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
 		OBJ_16 /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				OBJ_9 /* Character.extension.swift */,
 				OBJ_11 /* String.extension.swift */,
 				FE5226AE1ECD557800118252 /* UnicodeScalar.extension.swift */,
+				FECDF26B1F811356009AF2C9 /* Substring.extension.swift */,
 			);
 			name = SwiftyString;
 			path = Sources/SwiftyString;
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				FECDF26C1F811356009AF2C9 /* Substring.extension.swift in Sources */,
 				FE621CAC1F56928500632C30 /* CamelCasedString.swift in Sources */,
 				FE621CAE1F56929800632C30 /* CasedString.swift in Sources */,
 				FE5226AF1ECD557800118252 /* UnicodeScalar.extension.swift in Sources */,
