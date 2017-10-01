@@ -65,6 +65,7 @@ extension String {
 
     // MARK: - Emoji
 
+    #if os(macOS)
     public var glyphCount: Int {
         let richText = NSAttributedString(string: self)
         let line = CTLineCreateWithAttributedString(richText)
@@ -72,6 +73,7 @@ extension String {
     }
 
     public var isSingleEmoji: Bool { return glyphCount == 1 && containsEmoji }
+    #endif
     public var containsEmoji: Bool { return !unicodeScalars.filter { $0.isEmoji }.isEmpty }
     public var containsOnlyEmoji: Bool { return
         !isEmpty && unicodeScalars.first { !$0.isEmoji && !$0.isZeroWidthJoiner } == nil

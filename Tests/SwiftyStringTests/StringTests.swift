@@ -88,11 +88,13 @@ class StringTests: XCTestCase {
         XCTAssertEqual("abcde".replacingLast(2, with: "*"), "abc**")
     }
 
+    #if os(macOS)
     func testIsSingleEmoji() {
         XCTAssertFalse("a".isSingleEmoji)
         XCTAssertTrue("🐶".isSingleEmoji)
         XCTAssertTrue("👨‍👩‍👧‍👧".isSingleEmoji)
     }
+    #endif
 
     func testContainsEmoji() {
         XCTAssertFalse("".containsEmoji)
