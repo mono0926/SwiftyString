@@ -1,6 +1,6 @@
 import XCTest
-@testable import SwiftyStringExtensionTests
+@testable import SwiftyStringTests
 
 XCTMain([
-     testCase(SwiftyStringExtensionTests.allTests),
+     testCase(SwiftyStringTests.allTests),
 ])

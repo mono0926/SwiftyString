@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/mono/Git/Private/SwiftyStringExtension/SwiftyString.xcodeproj">
+      location = "self:/Users/mono/Git/Private/SwiftyString/SwiftyString.xcodeproj">
    </FileRef>
 </Workspace>

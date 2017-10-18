@@ -82,12 +82,12 @@
 		OBJ_12 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* SwiftyStringExtensionTests */,
+				OBJ_13 /* SwiftyStringTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		OBJ_13 /* SwiftyStringExtensionTests */ = {
+		OBJ_13 /* SwiftyStringTests */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* CharacterTests.swift */,
@@ -95,7 +95,7 @@
 				FE5226B01ECD55A800118252 /* UnicodeScalarExtensionTests.swift */,
 				FE621CB21F56943C00632C30 /* CasedStringTests.swift */,
 			);
-			name = SwiftyStringExtensionTests;
+			name = SwiftyStringTests;
 			path = Tests/SwiftyStringTests;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -156,7 +156,7 @@
 			dependencies = (
 			);
 			name = SwiftyString;
-			productName = SwiftyStringExtension;
+			productName = SwiftyString;
 			productReference = OBJ_19 /* SwiftyString.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -173,7 +173,7 @@
 				FE6AA8EE1ECE839400FCF6D5 /* PBXTargetDependency */,
 			);
 			name = Tests;
-			productName = SwiftyStringExtensionTests;
+			productName = SwiftyStringTests;
 			productReference = OBJ_20 /* SwiftyStringTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};

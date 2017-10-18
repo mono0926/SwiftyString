@@ -1,6 +1,6 @@
 //
 //  Character.extension.swift
-//  SwiftyStringExtension
+//  SwiftyString
 //
 //  Created by mono on 2016/10/02.
 //  Copyright © 2016 mono. All rights reserved.

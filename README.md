@@ -1,1 +1,1 @@
-# SwiftyStringExtension
+# SwiftyString

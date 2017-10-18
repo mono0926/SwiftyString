@@ -1,6 +1,6 @@
 //
 //  UnicodeScalar.extension.swift
-//  SwiftyStringExtension
+//  SwiftyString
 //
 //  Created by mono on 2017/05/18.
 //
