@@ -89,6 +89,13 @@ class StringTests: XCTestCase {
         XCTAssertEqual(ranges[1].upperBound, text.index(text.startIndex, offsetBy: 15))
     }
 
+    func testRanges_empty() throws {
+        let s = "🐶👪"
+        let text = ""
+        let ranges: [Range<String.Index>] = try text.ranges(of: s)
+        XCTAssertEqual(ranges.count, 0)
+    }
+
     func testMultiplied() {
         XCTAssertEqual("ab".multiplied(3), "ababab")
     }
