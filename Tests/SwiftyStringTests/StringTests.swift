@@ -78,6 +78,17 @@ class StringTests: XCTestCase {
         XCTAssertEqual("aabbcc".capitalizingFirstLetter, "Aabbcc")
     }
 
+    func testRanges() throws {
+        let s = "🐶👪"
+        let text = "hello \(s) and \(s)"
+        let ranges: [Range<String.Index>] = try text.ranges(of: s)
+        XCTAssertEqual(ranges.count, 2)
+        XCTAssertEqual(ranges[0].lowerBound, text.index(text.startIndex, offsetBy: 6))
+        XCTAssertEqual(ranges[0].upperBound, text.index(text.startIndex, offsetBy: 8))
+        XCTAssertEqual(ranges[1].lowerBound, text.index(text.startIndex, offsetBy: 13))
+        XCTAssertEqual(ranges[1].upperBound, text.index(text.startIndex, offsetBy: 15))
+    }
+
     func testMultiplied() {
         XCTAssertEqual("ab".multiplied(3), "ababab")
     }

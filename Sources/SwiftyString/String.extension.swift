@@ -63,6 +63,11 @@ extension String {
         return prefix(1).capitalized + dropFirst()
     }
 
+    public func ranges(of s: String) throws -> [Range<Index>] {
+        let re = try NSRegularExpression(pattern: NSRegularExpression.escapedPattern(for: s), options: [])
+        return re.matches(in: self, options: [], range: NSRange(self.range(of: self)!, in: self)).flatMap { Range<Index>($0.range, in: self) }
+    }
+
     // MARK: - Emoji
 
     #if os(macOS)
