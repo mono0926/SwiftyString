@@ -82,7 +82,7 @@ extension String {
     #endif
     public var containsEmoji: Bool { return !unicodeScalars.filter { $0.isEmoji }.isEmpty }
     public var containsOnlyEmoji: Bool { return
-        !isEmpty && unicodeScalars.first { !$0.isEmoji && !$0.isZeroWidthJoiner } == nil
+        !isEmpty && first { !String($0).containsEmoji } == nil
     }
     public var emojiString: String { return emojiScalars.map { String($0) }.joined(separator: "") }
     public var emojis: [String] {
