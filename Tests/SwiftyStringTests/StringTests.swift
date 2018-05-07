@@ -111,6 +111,7 @@ class StringTests: XCTestCase {
         XCTAssertFalse("a".isSingleEmoji)
         XCTAssertTrue("🐶".isSingleEmoji)
         XCTAssertTrue("👨‍👩‍👧‍👧".isSingleEmoji)
+        XCTAssertTrue("1️⃣".isSingleEmoji)
     }
     #endif
 
