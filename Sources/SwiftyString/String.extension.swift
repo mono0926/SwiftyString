@@ -66,7 +66,7 @@ extension String {
     public func ranges(of s: String) throws -> [Range<Index>] {
         guard let range = self.range(of: self), !isEmpty else { return [] }
         let re = try NSRegularExpression(pattern: NSRegularExpression.escapedPattern(for: s), options: [])
-        return re.matches(in: self, options: [], range: NSRange(range, in: self)).flatMap { Range<Index>($0.range, in: self) }
+        return re.matches(in: self, options: [], range: NSRange(range, in: self)).compactMap { Range<Index>($0.range, in: self) }
     }
 
     // MARK: - Emoji
