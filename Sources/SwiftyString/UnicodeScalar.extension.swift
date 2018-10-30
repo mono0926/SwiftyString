@@ -8,8 +8,6 @@
 
 import Foundation
 
-extension UnicodeScalar {}
-
 extension UnicodeScalar {
     public var isEmoji: Bool {
         switch value {
